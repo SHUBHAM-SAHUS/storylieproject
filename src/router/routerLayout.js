@@ -1,4 +1,5 @@
 
+import { Footer } from "components/commoncomponent/FooterLayout/Footer.js";
 import { Header } from "components/commoncomponent/HeaderLayout/Header.js";
 
 
@@ -12,7 +13,9 @@ export const PublicRouterLayout = ({ children }) => (
     </div>
     <strong className="mx-auto"></strong>
     <Header/>
-    {children}</div>
+    {children}
+     <Footer/>
+    </div>
 );
 
 export const PrivateRouterLayout = ({ children }) => <App>{children}</App>;
