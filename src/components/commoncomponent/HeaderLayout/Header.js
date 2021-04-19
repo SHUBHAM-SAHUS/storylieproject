@@ -73,9 +73,7 @@ import Sidebar from '../Sidebar/Sidebar'
           <div className="dropdown-menu userdropdown" aria-labelledby="dropdownMenuLink"> 
             <h5><img src="images/icon-user.png" /> &nbsp;&nbsp;My Station</h5>
             <ul className="list-unstyled">
-              <li><a href="#"><img 
-              
-              alt />&nbsp;&nbsp;FAQ'S </a></li>
+              <li><a href="#"><img alt />&nbsp;&nbsp;FAQ'S </a></li>
               <li><a href="#"><img src={help} alt="pic"  />&nbsp;&nbsp;Help &amp; Support </a></li>
               <li><a href="#"><img src={setting} alt />&nbsp;&nbsp;User Setting </a></li>
               <li><a href="#"><img src={logout} alt />&nbsp;&nbsp;Logout </a></li>

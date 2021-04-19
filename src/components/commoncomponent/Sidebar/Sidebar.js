@@ -6,9 +6,10 @@ import * as AiIcons from 'react-icons/ai';
 import { SidebarData } from './SidebarData';
 import SubMenu from './SubMenu';
 import { IconContext } from 'react-icons/lib';
+import {CgMenuLeft} from 'react-icons/cg'
 
 const Nav = styled.div`
-  background: #15171c;
+  background: #fff;
   height: 80px;
   display: flex;
   justify-content: flex-start;
@@ -48,10 +49,10 @@ const Sidebar = () => {
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: '#000' }}>
         <Nav>
           <NavIcon to='#'>
-            <FaIcons.FaBars onClick={showSidebar} />
+            <CgMenuLeft onClick={showSidebar} />
           </NavIcon>
         </Nav>
         <SidebarNav sidebar={sidebar}>

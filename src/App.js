@@ -8,12 +8,10 @@ import storage from "utils/storage";
 import { makeStyles } from '@material-ui/core/styles';
 import Alert from '@material-ui/lab/Alert';
 import FacebookLogin from 'react-facebook-login';
-
-
-
-
-
-
+import Sidebar from './components/commoncomponent/Sidebar/Sidebar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Overview from './components/commoncomponent/SidebarPages/Overview';
+import { Reports, ReportsOne, ReportsTwo, ReportsThree } from './components/commoncomponent/SidebarPages/Reports';
 
 import "./App.css";
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +51,16 @@ const App = ({ children }) => {
 
   return (
     <>        
-
+<Router>
+      <Sidebar />
+      <Switch>
+        <Route path='/overview' exact component={Overview} />
+        <Route path='/reports' exact component={Reports} />
+        <Route path='/reports/reports1' exact component={ReportsOne} />
+        <Route path='/reports/reports2' exact component={ReportsTwo} />
+        <Route path='/reports/reports3' exact component={ReportsThree} />        
+      </Switch>
+    </Router>
       </>
   );
 };
