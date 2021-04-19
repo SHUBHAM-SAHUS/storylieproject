@@ -21,9 +21,9 @@ import { SideAdvertisement } from './Sisebaraddvertisement/SideAdvertisement'
             
                     </div>
                     <div className="col-md-3">
-                    <SidebarDetails/>
+                    {/* <SidebarDetails/>
                     <InviteCard/>
-                    <SideAdvertisement/>
+                    <SideAdvertisement/> */}
                     </div>
 
 
