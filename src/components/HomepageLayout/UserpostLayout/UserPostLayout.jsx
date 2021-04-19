@@ -11,7 +11,9 @@ import "./userpost.scss"
 export const UserPostLayout = () => {
     return (
       <>
-           <div className="section-userpost mb-3 mt-2">
+      <div className='row'>
+         <div className="col-12">
+         <div className="section-userpost mb-3 mt-2 px-2">
   <div className="article"> 
     {/* Media */}
     <div className="media p-3"> <img src={auther1} alt="John Doe" className="mr-3 rounded-circle" style={{"width":"86px"}} />
@@ -33,6 +35,11 @@ export const UserPostLayout = () => {
     </div>
    
   </div>
+</div> 
+
+         </div>
+
+  
 </div>
 
       </>

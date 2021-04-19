@@ -6,7 +6,7 @@ import "./footer.scss"
 export const Footer = () => {
     return (
         <>
-      <footer className="mainfooter fixed-bottom">
+      <footer className="mainfooter ">
   <div className="container-fluid">
     <div className="row clearfix">
       <div className="col-md-3"> <a href="#"> <img src={footerlogo} alt="footerlogo" /> </a>
