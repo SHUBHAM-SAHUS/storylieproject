@@ -17,7 +17,7 @@ import { SideAdvertisement } from './Sisebaraddvertisement/SideAdvertisement'
                   {/* <CarouselLayout/> */}
                     <UserPostLayout/>
             {/* <SponcerLayout/>  */}
-            <SocialFeedBack/>
+            {/* <SocialFeedBack/> */}
             
                     </div>
                     <div className="col-md-3">
