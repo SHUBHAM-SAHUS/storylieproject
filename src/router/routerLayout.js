@@ -1,6 +1,9 @@
 
 import { Footer } from "components/commoncomponent/FooterLayout/Footer.js";
 import { Header } from "components/commoncomponent/HeaderLayout/Header.js";
+import { NavbarLayout } from "components/commoncomponent/NavbarLayout/NavbarLayout.js";
+import { Navigation } from "components/commoncomponent/Navigation/Navigation.js";
+
 
 
 import App from "../App.js";
@@ -12,7 +15,9 @@ export const PublicRouterLayout = ({ children }) => (
     {/* <img src={logo} alt="logo" width="80"/> */}
     </div>
     <strong className="mx-auto"></strong>
-    <Header/>
+    {/* <Header/> */}
+  <Navigation/>
+    {/* <NavbarLayout/> */}
     {children}
      <Footer/>
     </div>

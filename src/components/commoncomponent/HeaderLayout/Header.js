@@ -32,7 +32,7 @@ import Sidebar from '../Sidebar/Sidebar'
 
     return (
     <>
- <nav className="navbar navbar-expand-lg navbar-light shadow fixed-top" style={{"background":"#ffffff"}}>
+ <nav className="navbar navbar-expand-lg navbar-light shadow" style={{"background":"#ffffff"}}>
   <div className="container-fluid"> <a id="sidebarCollapse"> <Sidebar /> {/*<img src={collapsebtn} alt="img" className="mr-4" />*/} </a> <a href="/"> <img src={logo} alt="logo" /> </a>
     
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
