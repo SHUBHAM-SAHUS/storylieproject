@@ -18,7 +18,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 import Menu from "@material-ui/core/Menu";
-
+import Sidebar from '../Sidebar/Sidebar'
  
 
 
@@ -33,7 +33,7 @@ import Menu from "@material-ui/core/Menu";
     return (
     <>
  <nav className="navbar navbar-expand-lg navbar-light shadow fixed-top" style={{"background":"#ffffff"}}>
-  <div className="container-fluid"> <a id="sidebarCollapse"> <img src={collapsebtn} alt="img" className="mr-4" /> </a> <a href="/"> <img src={logo} alt="logo" /> </a>
+  <div className="container-fluid"> <a id="sidebarCollapse"> <Sidebar /> {/*<img src={collapsebtn} alt="img" className="mr-4" />*/} </a> <a href="/"> <img src={logo} alt="logo" /> </a>
     
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <form className="form-inline my-2 my-lg-0 ml-auto search-form">
@@ -42,12 +42,6 @@ import Menu from "@material-ui/core/Menu";
       </form>
       <ul className="nav navbar-nav ml-auto">
         <li className="nav-item active dropdown "> <a className="nav-link dropdown-toggle"    aria-haspopup="true" aria-expanded="false"> <img src={dropdownsearch} alt="pic" /> </a> 
-        
-                   
-  
-        
-
-
 
           <div className="dropdown-menu createdropdown" aria-labelledby="dropdownMenuLink">
             <ul className="list-unstyled create-list">
