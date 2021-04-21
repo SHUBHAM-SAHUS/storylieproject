@@ -18,18 +18,16 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import { makeStyles } from '@material-ui/core/styles';
 import Menu from "@material-ui/core/Menu";
-import Sidebar from '../Sidebar/Sidebar'
- 
-
-
-
-
+import Sidebar from '../Sidebar/Sidebar';
 
  export const Header = () => {
-         
- 
 
-
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+    
+  
     return (
     <>
  <nav className="navbar navbar-expand-lg navbar-light shadow" style={{"background":"#ffffff"}}>
@@ -40,10 +38,10 @@ import Sidebar from '../Sidebar/Sidebar'
         <input className="form-control mr-sm-2 ml-auto" type="search" placeholder="Search" aria-label="Search..." />
         <button className="search-btn my-2 my-sm-0" type="submit"> <img src={search} alt="pic" /> </button>
       </form>
-      <ul className="nav navbar-nav ml-auto">
-        <li className="nav-item active dropdown "> <a className="nav-link dropdown-toggle"    aria-haspopup="true" aria-expanded="false"> <img src={dropdownsearch} alt="pic" /> </a> 
+      <ul className="nav navbar-nav ml-auto" >
+        <li className="nav-item active dropdown "> <a className="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" > <img src={dropdownsearch} alt="pic" /> </a> 
 
-          <div className="dropdown-menu createdropdown" aria-labelledby="dropdownMenuLink">
+          {/* <div className="dropdown-menu createdropdown" aria-labelledby="dropdownMenuLink">
             <ul className="list-unstyled create-list">
               <li><h4>Create</h4></li>
               <li>
@@ -55,7 +53,7 @@ import Sidebar from '../Sidebar/Sidebar'
                 <p>Share a post on your OneMic feed</p>
               </li>
             </ul>
-          </div>
+          </div> */}
           {/*//*/} 
         </li>
         <li className="nav-item active"> <a className="nav-link" href="#"><img src={alert} alt="img" /></a> </li>

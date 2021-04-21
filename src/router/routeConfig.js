@@ -1,14 +1,21 @@
-import Home from "components/HomepageLayout/Home";
+// import Home from "components/HomepageLayout/Home";
+import NewHome from "components/NewHomePage/NewHome";
 import { PostDetails } from "components/PostDetailsLayout/PostDetails";
 
 
 //private routes
 
 export const publicRoutes = [
+  // {
+  //   key: "home",
+  //   path: "/",
+  //   component: Home,
+  //   exact: true,
+  // },
   {
-    key: "home",
+    key: "newhome",
     path: "/",
-    component: Home,
+    component: NewHome,
     exact: true,
   },
 
