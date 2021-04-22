@@ -23,6 +23,7 @@ export const OwlCarouselOne = () => {
                     smartSpeed={3000}
                     autoplayTimeout={7000}
                     margin={8} >
+                        
                     <div className="item bg-white">
                         <div className="media p-3"> <img src={image1} alt="John Doe" className="mr-3 rounded" style={{ width: 150 }} />
                             <div className="media-body">
