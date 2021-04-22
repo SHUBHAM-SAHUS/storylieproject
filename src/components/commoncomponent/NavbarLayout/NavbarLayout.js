@@ -15,197 +15,186 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import "./navbar.scss"
-import {FaRegUser} from "react-icons/fa"
+import { FaRegUser } from "react-icons/fa"
 import logo from "../../../assets/images/logo.png"
 import dropdowncrossbtn from "../../../assets/images/dropdown-cross-btn.png"
 import searchbtn from "../../../assets/images/search-btn.png"
- 
+import { Dropdown } from 'react-bootstrap';
+import { ModalTwo } from '../PostModal/ModalTwo';
+import { TopicModal } from '../Modal/TopicModal';
+
+
+
 const useStyles = makeStyles((theme) => ({
-    grow: {
-      flexGrow: 1,
+  grow: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    display: 'none',
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
     },
-    menuButton: {
-      marginRight: theme.spacing(2),
+  },
+  search: {
+    position: 'relative',
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: fade(theme.palette.common.white, 0.15),
+    '&:hover': {
+      backgroundColor: fade(theme.palette.common.white, 0.25),
     },
-    title: {
-      display: 'none',
-      [theme.breakpoints.up('sm')]: {
-        display: 'block',
-      },
+    marginRight: theme.spacing(2),
+    marginLeft: 0,
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(3),
+      width: 'auto',
     },
-    search: {
-      position: 'relative',
-      borderRadius: theme.shape.borderRadius,
-      backgroundColor: fade(theme.palette.common.white, 0.15),
-      '&:hover': {
-        backgroundColor: fade(theme.palette.common.white, 0.25),
-      },
-      marginRight: theme.spacing(2),
-      marginLeft: 0,
-      width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(3),
-        width: 'auto',
-      },
+  },
+  searchIcon: {
+    padding: theme.spacing(0, 2),
+    height: '100%',
+    position: 'absolute',
+    pointerEvents: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  inputRoot: {
+    color: 'inherit',
+  },
+  inputInput: {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '20ch',
     },
-    searchIcon: {
-      padding: theme.spacing(0, 2),
-      height: '100%',
-      position: 'absolute',
-      pointerEvents: 'none',
+  },
+  sectionDesktop: {
+    display: 'none',
+    [theme.breakpoints.up('md')]: {
       display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
     },
-    inputRoot: {
-      color: 'inherit',
-    },
-    inputInput: {
-      padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
-      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-      transition: theme.transitions.create('width'),
-      width: '100%',
-      [theme.breakpoints.up('md')]: {
-        width: '20ch',
-      },
-    },
-    sectionDesktop: {
+  },
+  sectionMobile: {
+    display: 'flex',
+    [theme.breakpoints.up('md')]: {
       display: 'none',
-      [theme.breakpoints.up('md')]: {
-        display: 'flex',
-      },
     },
-    sectionMobile: {
-      display: 'flex',
-      [theme.breakpoints.up('md')]: {
-        display: 'none',
-      },
-    },
-  }));
+  },
+}));
 
 
 export const NavbarLayout = () => {
- 
-    const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    // const [anchorE, setAnchorEl] = React.useState(null);
-    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  
-    const isMenuOpen = Boolean(anchorEl);
-    const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  
-    const handleProfileMenuOpen = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
 
-   const handleProfileMenuOpen2 = (event) => {
-      setAnchorEl(event.currentTarget);
-    };
-    
-    const handleMobileMenuClose = () => {
-      setMobileMoreAnchorEl(null);
-    };
-  
-    const handleMenuClose = () => {
-      setAnchorEl(null);
-      handleMobileMenuClose();
-    };
-  
-    const handleMobileMenuOpen = (event) => {
-      setMobileMoreAnchorEl(event.currentTarget);
-    };
-  
-    const menuId = 'primary-search-account-menu';
-    const renderMenu = (
-      <Menu
-        anchorEl={anchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        id={menuId}
-        keepMounted
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMenuOpen}
-        onClose={handleMenuClose}
-      >
-        <MenuItem onClick={handleMenuClose}> my stations  </MenuItem>
-        <MenuItem onClick={handleMenuClose}> FAQ'S </MenuItem>
-        <MenuItem onClick={handleMenuClose}> Help setting </MenuItem>
-        <MenuItem onClick={handleMenuClose}> User setting </MenuItem>
-        <MenuItem onClick={handleMenuClose}> Logout </MenuItem>
-      </Menu>,
-         <Menu
-         anchorEl={anchorEl}
-         anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-         id={menuId}
-         keepMounted
-         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-         open={isMenuOpen}
-         onClose={handleMenuClose}
-       >
-         <MenuItem onClick={handleMenuClose}> bhb  </MenuItem>
-         <MenuItem onClick={handleMenuClose}> bhh </MenuItem>
-         <MenuItem onClick={handleMenuClose}> bhbh </MenuItem>
-         <MenuItem onClick={handleMenuClose}> bhvb </MenuItem>
-         <MenuItem onClick={handleMenuClose}> vgghv </MenuItem>
-       </Menu>
+  const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  // const [anchorE, setAnchorEl] = React.useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleProfileMenuOpen2 = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
+
+  const handleMobileMenuOpen = (event) => {
+    setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const menuId = 'primary-search-account-menu';
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}> my stations  </MenuItem>
+      <MenuItem onClick={handleMenuClose}> FAQ'S </MenuItem>
+      <MenuItem onClick={handleMenuClose}> Help setting </MenuItem>
+      <MenuItem onClick={handleMenuClose}> User setting </MenuItem>
+      <MenuItem onClick={handleMenuClose}> Logout </MenuItem>
+    </Menu>
+
+
+  );
 
 
 
-    );
 
-   
+  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem>
+        <IconButton aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="secondary">
+            <MailIcon />
+          </Badge>
+        </IconButton>
+        <p>Messages</p>
+      </MenuItem>
+      <MenuItem>
+        <IconButton aria-label="show 11 new notifications" color="inherit">
+          <Badge badgeContent={11} color="secondary">
+            <NotificationsIcon />
+          </Badge>
+        </IconButton>
+        <p>Notifications</p>
+      </MenuItem>
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
 
-  
-    const mobileMenuId = 'primary-search-account-menu-mobile';
-    const renderMobileMenu = (
-      <Menu
-        anchorEl={mobileMoreAnchorEl}
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        id={mobileMenuId}
-        keepMounted
-        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={isMobileMenuOpen}
-        onClose={handleMobileMenuClose}
-      >
-        <MenuItem>
-          <IconButton aria-label="show 4 new mails" color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <MailIcon />
-            </Badge>
-          </IconButton>
-          <p>Messages</p>
-        </MenuItem>
-        <MenuItem>
-          <IconButton aria-label="show 11 new notifications" color="inherit">
-            <Badge badgeContent={11} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-          <p>Notifications</p>
-        </MenuItem>
-        <MenuItem onClick={handleProfileMenuOpen}>
-          <IconButton
-            aria-label="account of current user"
-            aria-controls="primary-search-account-menu"
-            aria-haspopup="true"
-            color="inherit"
-          >
-            <AccountCircle />
-           
-          </IconButton>
-          <p>Profile</p>
-        </MenuItem>
-      </Menu>
-    );
+        </IconButton>
+        <p>Profile</p>
+      </MenuItem>
+    </Menu>
+  );
 
 
-    
 
 
-    return (
+
+  return (
     <>
-       {/* <div className="shadow py-5" > */}
-      <AppBar position="static"className="py-4 header_bg_main shadow">
+      {/* <div className="shadow py-5" > */}
+      <AppBar position="static" className="py-4 header_bg_main shadow">
         <Toolbar>
           <IconButton
             edge="start"
@@ -216,8 +205,8 @@ export const NavbarLayout = () => {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            
-            <img src={logo} alt="logomenu"/>
+
+            <img src={logo} alt="logomenu" />
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -231,23 +220,32 @@ export const NavbarLayout = () => {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>  <img src={searchbtn} alt="pic"/>
+          </div>  <img src={searchbtn} alt="pic" />
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-         
 
-             
-            <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen2}
-              color="inherit"
-            >
+
+
+            
               {/* <AccountCircle /> */}
-               <img src={dropdowncrossbtn}/>
-            </IconButton>
+              
+              <Dropdown>
+                <Dropdown.Toggle className="dropdown-btn" id="dropdown-basic">
+                <img src={dropdowncrossbtn} />
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu className="dropdown-menu">
+                  <h4 className="dropdown-heading"><b>Create</b></h4>
+                  
+                  <Dropdown.Item className="dropdown-item"><TopicModal/></Dropdown.Item>
+                  <p>Create a topic of interest</p>                 
+                  
+                  <Dropdown.Item className="dropdown-item" ><ModalTwo/></Dropdown.Item>
+                  <p>Share a post on your OneMic feed</p>
+                  
+                </Dropdown.Menu>
+              </Dropdown>
+            
 
 
 
@@ -257,7 +255,7 @@ export const NavbarLayout = () => {
 
             <IconButton aria-label="show 17 new notifications" color="inherit">
               {/* <Badge badgeContent={17} color="secondary"> */}
-                <NotificationsIcon />
+              <NotificationsIcon />
               {/* </Badge> */}
             </IconButton>
             <IconButton
@@ -269,13 +267,13 @@ export const NavbarLayout = () => {
               color="inherit"
             >
               {/* <AccountCircle /> */}
-              <FaRegUser/>
+              <FaRegUser />
             </IconButton>
-            
+
           </div>
-             
-             <button className="rm-btn">upgrADE</button>
-          
+
+          <button className="rm-btn">upgrADE</button>
+
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
@@ -291,10 +289,10 @@ export const NavbarLayout = () => {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
-    {/* </div> */}
+      {/* </div> */}
 
     </>
-    )
+  )
 }
 
 

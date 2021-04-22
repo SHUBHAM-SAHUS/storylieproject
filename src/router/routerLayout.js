@@ -12,15 +12,16 @@ import App from "../App.js";
 export const PublicRouterLayout = ({ children }) => (
   <div className="">
     <div className="logo d-flex justify-content-center">
-    {/* <img src={logo} alt="logo" width="80"/> */}
+      {/* <img src={logo} alt="logo" width="80"/> */}
     </div>
     <strong className="mx-auto"></strong>
     {/* <Header/> */}
-  {/* <Navigation/> */}
-    <NavbarLayout/>
+    {/* <Navigation/> */}
+
+    <NavbarLayout />
     {children}
-     <Footer/>
-    </div>
+    <Footer />
+  </div>
 );
 
 export const PrivateRouterLayout = ({ children }) => <App>{children}</App>;
