@@ -9,7 +9,7 @@ import { IconContext } from 'react-icons/lib';
 import {CgMenuLeft} from 'react-icons/cg'
 
 const Nav = styled.div`
-  background: #fff;
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: flex-start;

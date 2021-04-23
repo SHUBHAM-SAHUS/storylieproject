@@ -1,8 +1,9 @@
 .main{
     background: #F3F4F6;
 }
+
 section {
-    clear: both;    
+    clear: both;
     margin-bottom: 20px;
     width: 100%;
     display: inline-block;
@@ -30,4 +31,7 @@ section .section-header, section .section-body {
     width: 100%;
     clear: both;
     display: inline-block;
+}
+.top-media-box {
+    padding-left: 12%;
 }

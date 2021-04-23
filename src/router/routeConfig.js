@@ -1,6 +1,7 @@
 // import Home from "components/HomepageLayout/Home";
 import NewHome from "components/NewHomePage/NewHome";
 import { PostDetails } from "components/PostDetailsLayout/PostDetails";
+import { TopicDetails } from "components/TopicDetailsLayout/TopicDetails"
 
 
 //private routes
@@ -25,6 +26,12 @@ export const publicRoutes = [
     component: PostDetails,
     exact: true,
   },
+  {
+    key: "topicdetailskey",
+    path: "/topic-details",
+    component: TopicDetails,
+    exact: true,
+  }
 
 ];
 
