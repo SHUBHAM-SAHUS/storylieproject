@@ -21,7 +21,7 @@ export const OwlCarouselOne = () => {
                     nav={false}
                     autoPlay={true}
                     smartSpeed={3000}
-                    autoplayTimeout={7000}
+                    autoplayTimeout={2000}
                     margin={8}
                      >
 

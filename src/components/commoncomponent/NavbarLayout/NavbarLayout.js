@@ -22,6 +22,7 @@ import searchbtn from "../../../assets/images/search-btn.png"
 import { Dropdown } from 'react-bootstrap';
 import { ModalTwo } from '../PostModal/ModalTwo';
 import { TopicModal } from '../Modal/TopicModal';
+import Sidebar from '../Sidebar/Sidebar';
 
 
 
@@ -202,7 +203,7 @@ export const NavbarLayout = () => {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <Sidebar/>
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
 
