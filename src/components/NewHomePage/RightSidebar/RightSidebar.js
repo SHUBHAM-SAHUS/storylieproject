@@ -10,7 +10,7 @@ export const RightSidebar = () => {
           <div className="widget-section blue-bg col-md-12 pt-4">
             <section>
               <div className="section-header">
-                <h2 className="sec-heading widget-heading float-left">Top Rated Topics</h2>
+                <h2 className="sec-heading widget-heading text-white float-left">Top Rated Topics</h2>
                 <small className="float-right"> <a href="#">View all</a> </small> </div>
               <div className="topic-list">
                 <ul className="list-unstyled">

@@ -49,7 +49,7 @@ const NewHome = () => {
                             <div class="section mb-3"> <img src={banner3} class="img-fluid center-block rounded" /> </div>
                         </div>
                         <div className="col-md-3">
-                            <div className="row clearfix">
+                            <div className="row">
                                 <RightSidebar/>
                             </div>
                             <InviteCard/>

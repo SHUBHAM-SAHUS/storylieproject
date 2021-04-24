@@ -1,17 +1,3 @@
-*{
-  padding:0;
-  margin:0;
-  box-sizing:border-box;
-}
-h1,h2,h3,h4,h5,h5,p{
-  font-family: 'Roboto', sans-serif;
-}
-
-body{
-   /* margin-top:34px; */
-  /* margin-bottom:180px; */
-}
-
-.st{
-  margin-top:80px!important;
+body {
+  font-family: 'Poppins',sans-serif!important;
 }

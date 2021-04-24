@@ -70,3 +70,13 @@ p{
     font-weight: 300;
     margin-bottom: 0.5rem;
 }
+.MuiIconButton-root{
+    margin-left: 15px !important;
+}
+.MuiIconButton-root:hover{
+    background-color: transparent !important;
+}
+.MuiIconButton-edgeEnd {
+    margin-right: 15px !important;
+}
+

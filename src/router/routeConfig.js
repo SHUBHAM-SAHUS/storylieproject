@@ -1,6 +1,7 @@
 // import Home from "components/HomepageLayout/Home";
 import NewHome from "components/NewHomePage/NewHome";
 import { PostDetails } from "components/PostDetailsLayout/PostDetails";
+import { Section } from "components/Section/Section";
 import { TopicDetails } from "components/TopicDetailsLayout/TopicDetails"
 
 
@@ -30,6 +31,12 @@ export const publicRoutes = [
     key: "topicdetailskey",
     path: "/topic-details",
     component: TopicDetails,
+    exact: true,
+  },
+  {
+    key: "section",
+    path: "/section",
+    component: Section,
     exact: true,
   }
 

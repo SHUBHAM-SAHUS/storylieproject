@@ -28,7 +28,7 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
-    flexGrow: 1,
+    flexGrow: 0.8,
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -73,8 +73,10 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '66ch',
+      height: '4vh'
     },
+    borderRadius: '25px'
   },
   sectionDesktop: {
     display: 'none',
@@ -195,16 +197,11 @@ export const NavbarLayout = () => {
   return (
     <>
       {/* <div className="shadow py-5" > */}
-      <AppBar position="static" className="py-4 header_bg_main shadow">
+      <AppBar position="static" className="header_bg_main shadow">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
+          
             <Sidebar/>
-          </IconButton>
+          
           <Typography className={classes.title} variant="h6" noWrap>
 
             <img src={logo} alt="logomenu" />
