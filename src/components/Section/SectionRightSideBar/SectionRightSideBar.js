@@ -19,8 +19,8 @@ export const SectionRightSideBar = () => {
                 <div className="widget-section blue-bg col-md-12 pt-4">
                     <section>
                         <ul className="list-unstyled">
-                            <li className="pb-4 pt-4"><a  className="section_color" href="#"><img src={p1} alt />&nbsp;&nbsp;&nbsp; My Station </a> </li>
-                            <li className="pb-4 pb-4"><a  className="section_color" href="#"><img src={p2} alt />&nbsp;&nbsp;&nbsp; Analytics </a></li>
+                            <li className="pb-4 pt-4"><a className="section_color" href="#"><img src={p1} alt />&nbsp;&nbsp;&nbsp; My Station </a> </li>
+                            <li className="pb-4 pb-4"><a className="section_color" href="#"><img src={p2} alt />&nbsp;&nbsp;&nbsp; Analytics </a></li>
                             <li className="pb-4 pb-4"><a className="section_color" href="#"><img src={p3} alt />&nbsp;&nbsp;&nbsp; Topics </a></li>
                             <li className="pb-4 pb-4"><a className="section_color" href="#"><img src={p5} alt />&nbsp;&nbsp;&nbsp; Comments </a></li>
                             <li className="pb-4 pb-4"><a className="section_color" href="#"><img src={p6} alt />&nbsp;&nbsp;&nbsp; Pins </a></li>

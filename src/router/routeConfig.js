@@ -2,7 +2,8 @@
 import NewHome from "components/NewHomePage/NewHome";
 import { PostDetails } from "components/PostDetailsLayout/PostDetails";
 import { Section } from "components/Section/Section";
-import { TopicDetails } from "components/TopicDetailsLayout/TopicDetails"
+import { TopicDetails } from "components/TopicDetailsLayout/TopicDetails";
+import { SectionDownvoted } from "components/SectionDownvoted/SectionDownvoted"
 
 
 //private routes
@@ -37,6 +38,12 @@ export const publicRoutes = [
     key: "section",
     path: "/section",
     component: Section,
+    exact: true,
+  },
+  {
+    key: "sectiondownvotedkey",
+    path: "/section-downvoted",
+    component: SectionDownvoted,
     exact: true,
   }
 

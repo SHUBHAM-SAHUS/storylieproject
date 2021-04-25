@@ -20,7 +20,7 @@ import logo from "../../../assets/images/logo.png"
 import dropdowncrossbtn from "../../../assets/images/dropdown-cross-btn.png"
 import searchbtn from "../../../assets/images/search-btn.png"
 import { Dropdown } from 'react-bootstrap';
-import { ModalTwo } from '../PostModal/ModalTwo';
+import { PostModal } from '../PostModal/PostModal';
 import { TopicModal } from '../Modal/TopicModal';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -238,7 +238,7 @@ export const NavbarLayout = () => {
                   <Dropdown.Item className="dropdown-item"><TopicModal/></Dropdown.Item>
                   <p>Create a topic of interest</p>                 
                   
-                  <Dropdown.Item className="dropdown-item" ><ModalTwo/></Dropdown.Item>
+                  <Dropdown.Item className="dropdown-item" ><PostModal/></Dropdown.Item>
                   <p>Share a post on your OneMic feed</p>
                   
                 </Dropdown.Menu>

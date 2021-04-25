@@ -42,7 +42,7 @@ export const SectionPost = () => {
                         <div class="article">
                             <div className="media p-3"> <img src={authorOne} alt="John Doe" className="mr-3 rounded-circle" style={{ width: 86 }} />
                                 <div className="media-body">
-                                    <div className="article-title"> Saved clicked
+                                    <div className="article-title">
                                         <h5>Why Colleges now imposing uniforms? <a href="#" className="btn btn-round prm-btn font-12 mr-2 float-right">Follow</a> </h5>
                                     </div>
                                     <div className="article-body">

@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Modal, Button } from "react-bootstrap";
-import './modalTwo.scss';
+import './postModal.scss';
 import { Dropdown } from 'react-bootstrap';
 import choose from 'assets/images/choose.png';
 import topicIcon from 'assets/images/topic-icon2.png'
 import voiceImage from 'assets/images/voice-image.png'
 
-export const ModalTwo = () => {
+export const PostModal = () => {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
