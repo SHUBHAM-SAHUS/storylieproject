@@ -21,7 +21,7 @@ export const Navigation = () => {
 
       <Navbar collapseOnSelect expand="lg" className="shadow">
         <Sidebar />
-        <Navbar.Brand href="#home"> <img src={logo} alt="logo" /> </Navbar.Brand>
+        <Navbar.Brand href="#home"> <img className="nav_logo" src={logo} alt="logo" /> </Navbar.Brand>
         <form className="form-inline my-2 my-lg-0 search-form">
           <input className="form-control mr-sm-2 ml-auto search-input" type="search" placeholder="Search" aria-label="Search..." />
           <img src={search} alt="pic" />
