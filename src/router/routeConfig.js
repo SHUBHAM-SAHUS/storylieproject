@@ -4,6 +4,8 @@ import { PostDetails } from "components/PostDetailsLayout/PostDetails";
 import { Section } from "components/Section/Section";
 import { TopicDetails } from "components/TopicDetailsLayout/TopicDetails";
 import { SectionDownvoted } from "components/SectionDownvoted/SectionDownvoted"
+import { LandingPageLayout } from "components/LandingpageLayout/LandingPageLayout";
+
 
 
 //private routes
@@ -45,7 +47,16 @@ export const publicRoutes = [
     path: "/section-downvoted",
     component: SectionDownvoted,
     exact: true,
+  },
+
+  {
+    key: "landding",
+    path: "/landing",
+    component: LandingPageLayout ,
+    exact: true,
   }
+
+
 
 ];
 

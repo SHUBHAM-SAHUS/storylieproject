@@ -1,6 +1,7 @@
 import React from 'react'
 import './carousel.scss'
-import { OwlCarouselOne } from '../Carousel/OwlCarousel/OwlCarousel'
+import { OwlCarouselOne } from './OwlCarousel/OwlCarousel'
+// import { OwlCarouselOne } from '../Carousel/OwlCarousel/OwlCarousel'
 
 
 const Carousel = () => {
@@ -13,6 +14,7 @@ const Carousel = () => {
                 <small className="float-right"> <a href="#">View all</a> </small>
                 <div className="" >
                     <OwlCarouselOne/>
+
                 </div>
             </div>
         </section>
