@@ -14,7 +14,7 @@ export const SignUp = () => {
     <form>
       <div className="form-group row">
         <div className="col-lg-6">
-          <label>Name</label>
+          <label>Name Heelo</label>
           <input type="text" name="name" className="form-control" placeholder="Enter your name" />
         </div>
         <div className="col-lg-6">
