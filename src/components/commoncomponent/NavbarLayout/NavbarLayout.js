@@ -14,7 +14,8 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import "./navbar.scss"
+import "./navbar.scss";
+import "./mediaNavigation.scss";
 import { FaRegUser } from "react-icons/fa"
 import logo from "../../../assets/images/logo.png"
 import dropdowncrossbtn from "../../../assets/images/dropdown-cross-btn.png"
@@ -28,7 +29,16 @@ import Sidebar from '../Sidebar/Sidebar';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
-    flexGrow: 0.8,
+    // flexGrow: 0.5,
+    [theme.breakpoints.up('sm')]:{
+      flexGrow: 0.1,    
+    },
+    [theme.breakpoints.up('md')]:{
+      flexGrow: 0.5,    
+    },
+    [theme.breakpoints.up('lg')]:{
+      flexGrow: 0.5,    
+    },
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -72,8 +82,16 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
-    [theme.breakpoints.up('md')]: {
-      width: '66ch',
+    [theme.breakpoints.up('sm')]: {
+      width: '50%',
+      height: '4vh'
+    },
+    // [theme.breakpoints.up('md')]: {
+    //   width: '50ch',
+    //   height: '4vh'
+    // },
+    [theme.breakpoints.up('xl')]: {
+      width: '40ch',
       height: '4vh'
     },
     borderRadius: '25px'
@@ -87,6 +105,9 @@ const useStyles = makeStyles((theme) => ({
   sectionMobile: {
     display: 'flex',
     [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+    [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
   },
@@ -197,7 +218,7 @@ export const NavbarLayout = () => {
   return (
     <>
       {/* <div className="shadow py-5" > */}
-      <AppBar position="static" className="header_bg_main shadow">
+      <AppBar className="nav-search" position="static" className="header_bg_main shadow">
         <Toolbar>
           
             <Sidebar/>
@@ -218,7 +239,7 @@ export const NavbarLayout = () => {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>  <img src={searchbtn} alt="pic" />
+          </div>  <img className="search_btn" src={searchbtn} alt="pic" />
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
 
@@ -228,7 +249,7 @@ export const NavbarLayout = () => {
               {/* <AccountCircle /> */}
               
               <Dropdown>
-                <Dropdown.Toggle className="dropdown-btn" id="dropdown-basic">
+                <Dropdown.Toggle  className="dropdown-btn" id="dropdown-basic">
                 <img src={dropdowncrossbtn} />
                 </Dropdown.Toggle>
 

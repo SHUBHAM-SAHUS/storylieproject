@@ -1,6 +1,10 @@
 import React from 'react'
 import './filter.scss'
-import filterIcon from 'assets/images/filter-icon.png'
+import filterIcon from 'assets/images/filter-icon.png';
+import filterAll from 'assets/images/filter-all.png';
+import fiterFollowed from 'assets/images/filter-followed.png';
+import filterHot from 'assets/images/filter-hot.png';
+import filterRecent from 'assets/images/filter-recent.png';
 
 const Filter = () => {
     return (
@@ -13,12 +17,12 @@ const Filter = () => {
                     <img src={filterIcon} alt /> &nbsp;&nbsp;<strong>Filter</strong>  &nbsp;&nbsp;&nbsp;&nbsp;{/* <i class="fa fa-angle-down" aria-hidden="true"></i> */}
                 </button>
                 {/**/}
-                <div className="dropdown-menu filterdropdown" aria-labelledby="dropdownMenuLink">
+                <div className="dropdown-menu filterdropdown filter-position" aria-labelledby="dropdownMenuLink">
                     <ul className="list-unstyled">
-                        {/* <li><a className="dropdown-item" href="#"><img src="images/filter-all.png" alt />&nbsp;&nbsp;&nbsp; All </a> </li>
-                        <li><a className="dropdown-item" href="#"><img src="images/filter-followed.png" alt />&nbsp;&nbsp;&nbsp; Followed </a></li>
-                        <li><a className="dropdown-item" href="#"><img src="images/filter-hot.png" alt />&nbsp;&nbsp;&nbsp; Hot </a></li>
-                        <li><a className="dropdown-item" href="#"><img src="images/filter-recent.png" alt />&nbsp;&nbsp;&nbsp; Recent </a></li> */}
+                        <li><a className="dropdown_item" href="#"><img src={filterAll} alt />&nbsp;&nbsp;&nbsp; All </a> </li>
+                        <li><a className="dropdown_item" href="#"><img src={fiterFollowed} alt />&nbsp;&nbsp;&nbsp; Followed </a></li>
+                        <li><a className="dropdown_item" href="#"><img src={filterHot} alt />&nbsp;&nbsp;&nbsp; Hot </a></li>
+                        <li><a className="dropdown_item" href="#"><img src={filterRecent} alt />&nbsp;&nbsp;&nbsp; Recent </a></li>
                     </ul>
                 </div>
             </div>

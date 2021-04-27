@@ -8,23 +8,21 @@ import image1 from 'assets/images/image-1.jpg'
 export const OwlCarouselOne = () => {
     return (
         <div>
-            <div class='container-fluid' >
+            <div class='' >
                 <div className="row title" style={{ marginBottom: "20px" }} >
 
                 </div>
             </div>
-            <div class='container-fluid' >
+            <div class='' >
                 <OwlCarousel items={3}
-                    className="owl-theme"
                     loop={true}
-                    dots={false}
-                    nav={false}
+                    dots={true}
+                    nav={true}
                     autoPlay={true}
                     smartSpeed={3000}
                     autoplayTimeout={2000}
                     margin={8}
                      >
-
                     <div className="item bg-white">
                         <div className="media p-3"> <img src={image1} alt="John Doe" className="mr-3 rounded" style={{ width: 150 }} />
                             <div className="media-body">
