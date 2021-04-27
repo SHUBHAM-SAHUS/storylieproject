@@ -5,8 +5,9 @@ import { Section } from "components/Section/Section";
 import { TopicDetails } from "components/TopicDetailsLayout/TopicDetails";
 import { SectionDownvoted } from "components/SectionDownvoted/SectionDownvoted"
 import { LandingPageLayout } from "components/LandingpageLayout/LandingPageLayout";
+import { UserSignupPage } from "components/Signuppage/UserSignupPage";
 
-
+<UserSignupPage/>
 
 //private routes
 
@@ -53,6 +54,13 @@ export const publicRoutes = [
     key: "landding",
     path: "/landing",
     component: LandingPageLayout ,
+    exact: true,
+  },
+
+  {
+    key: "signuppage",
+    path: "/signup",
+    component: UserSignupPage,
     exact: true,
   }
 
